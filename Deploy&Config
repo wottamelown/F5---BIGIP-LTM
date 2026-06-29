@@ -1,1 +1,13 @@
 
+-- Setup --
+Default username and pass: root;default
+1. Once the device boots up login to the BIG IP using management interface 192.168.1.245 (Standard on VE and Physical).
+2. Type command CONFIG to set up basic mgmt network access.
+3. To check the IP config we can use LINUX command IFCONFIG.
+
+
+==SNIP==
+
+3. Open the web browser to access the mgmt interface
+   ==SNIP==
+   

@@ -32,4 +32,20 @@ Default username and pass: root;default
 4. create pool
 5. create virtual server.
 
--- 
+-- Load Balancing Methods --
+1. There are 2 types of LB methods (Static vs Dynamic).
+2. static is user inputted method. i.e. 50 connections to SRV1 100 conections to SRV2.
+3. 4. Round Robin is static LB method, distributes the traffic one by one. Good in equal server specs environment.
+4. dynamic method is based upon the algorithm.
+5. Ratio, the more ration the more connection i.e. 3 means 100 2 means 50 1 means 25%. We can set up ration according to our requirement. 
+6. Least Connections, the fewest amount of open connection available on server will be given the traffic.
+7. Fastest, This will select through L7 OSI model, which ones will respond fast.
+8. Observed, this is dynamic ratio alloting method. The least open connections on a server will be preference to new traffic according to the observed behaviour. ration 3:2.
+9. Predictive, predictive is similar as observed but more aggressive. 4:1. Depends upon the traffic.
+10. Dynamic Ratio, the F5 will check the logs RAM, CPU through SNMP and distribute the traffic according to that.
+11. SNMP_DCA we need to add in the Local Traffic >> Monitors section.
+
+12. Load Balancing comes by 2 types (Node , Member).
+13. Node load balancing means all services for that server.
+14. member load balancing means for specific application, or services.
+15. choosing node is better, because it calculates total servces. and thn do the distribution.

@@ -27,5 +27,9 @@ Default username and pass: root;default
 
 -- Basic Configuration To Make It Work --
 1. First we will create VLANs
+2. Create SelfIPs.
+3. Add nodes
+4. create pool
+5. create virtual server.
 
-
+-- 

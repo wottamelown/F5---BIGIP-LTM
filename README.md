@@ -88,7 +88,21 @@ Default username and pass: root;default
 7. Passive Cookie, Sevrer will create the cookie and F5 will forward.
 8. Hash Cookie, Server will create a cookie an hash send it to client.
 9. Source address, means the F5 will preserve the history according to the source address. public ip basically.
-10. We can create persistence profile by Local Traffic >> Profiles >> Persistenc.
-11. SSL Profiles: These are used to protect the Client-Server / F5-Server communication. By encryption using SSL/TLS.
-12. If we use both, this will be called as full proxy / SSL Bridging.
-13. SSL Offloading, means only client ssl offloading. Client ---> F5. 
+10. Once we import the Cert signed by MS CA or digicert or ZeroSSL. We can import it under Locat Traffic >> profiles >> SSL. or create our own profile. then we create a virtual server and add the client profile in the VS menu.
+11. OneConnect: OneConnect profile enhances the web app performance by keeping the connection alive with the server. Instead of making a new connection everytime. This enhances the app performance. 
+12. We can create persistence profile by Local Traffic >> Profiles >> Persistenc.
+13. SSL Profiles: These are used to protect the Client-Server / F5-Server communication. By encryption using SSL/TLS.
+14. If we use both, this will be called as full proxy / SSL Bridging.
+15. SSL Offloading, means only client ssl offloading. Client ---> F5.
+
+-- Packet Filtering --
+1. Packet Filtering works in a way that, it blocks the incoming traffic from the source. Network >> Packet FIltering.
+2. We can deny the source IP.
+
+-- iAPPs --
+1. iApps are prebuilt templates to import adn this wil create nodes, virtual server, pool, profile, policies etc. in one single click.
+
+-- iHealth --
+1. iHealth is system diagnostic tool, we can generate the system full diagnostic report through system >> support and export it to qkview. To get the support from TAC.
+2. we can upload qkview to the company portal. THis will help us generate the results for the F5.
+3. we can generate the QKView file and once the process is finished, it gives access to the recommendations. 
